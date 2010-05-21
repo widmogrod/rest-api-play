@@ -11,7 +11,7 @@ defined('APPLICATION_ENV')
 // Ensure library/ is on include_path
 set_include_path(implode(PATH_SEPARATOR, array(
     '/usr/share/php/Zend/1.10.4',
-    '/usr/share/php/KontorX',
+	'/usr/share/php/KontorX/trunk',
     get_include_path(),
 )));
 
