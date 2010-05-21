@@ -1,0 +1,41 @@
+API pokrakowie.pl
+=================
+
+API jest skonstrułowane zgodnie z architektóra REST
+
+Główne URL do API to: http://api.pokrakowi.pl/
+
+Informacje sa zwracane w formacie JSON.
+Nie jest przewidziane wprowadzanie innego formatu.
+
+
+
+
+Zasoby
+======
+
+Wyszukiwanie
+------------
+
+AKCJA: 		
+	/search/near
+	
+OPIS:		
+	Do zasobu podawany jest adres wokół którego maja zostac znalezione
+	profesje takie jak: lekarze, weterynarze, stomatolodzy, praniwcy, fryzjerzy,..
+
+PARAMETRY:
+	address - string - Adres w obszarze, którego będą poszukiwane profesje.
+	
+	distance - float - Odległość w obrębie jakiej będa poszukiwane profesje.
+					   Odległośc jest wyrażona w kilometrach.
+					   Domyślna wartość to
+	
+PRZYKŁAD:
+	Wyszuka wszystkie profesje znajdujące się w odległości 200metrów (0.2km)
+	od wskazanego obszaru.
+
+	/search/near?address=Kraków ul. Starowiślna&distance=0.2
+	
+	Przykład zwróci
+	 
