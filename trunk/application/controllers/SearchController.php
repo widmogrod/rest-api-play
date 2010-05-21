@@ -7,7 +7,7 @@ class SearchController extends Zend_Controller_Action
 
 	public function init()
 	{
-		$this->_helper->contextSwitch->initContext();
+		$this->_helper->contextSwitch->initContext('json');
 		$this->_helper->viewRenderer->setNoRender(true);
 	}
 
