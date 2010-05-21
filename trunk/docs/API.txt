@@ -57,7 +57,4 @@ PRZYKŁAD:
 
 	/search/near?address=Kraków ul. Starowiślna&distance=0.2
 	
-	Przykład zwróci:
-
-	{"result":{"lekarze.krakow.pl":[],"prawnicy.krakow.pl":[],"stomatolodzy.krakow.pl":[],"fryzjerzy.krakow.pl":[{"name":"Gracja. Salon Pi\u0119kno\u015bci","id":"277","address":"ul. Brzozowa 20","district_url":"krakow-stare-miasto","district":"Stare Miasto <em>I<\/em>","catalog_promo_type_id":null},{"name":"Beleza. Gabinet Fryzjersko - Kosmetyczny","id":"145","address":"ul. Starowi\u015blna 99","district_url":"krakow-stare-miasto","district":"Stare Miasto <em>I<\/em>","catalog_promo_type_id":null},{"name":"De Silie. Salon Kosmetyczny, Solarium","id":"180","address":"ul. Starowi\u015blna 40","district_url":"krakow-stare-miasto","district":"Stare Miasto <em>I<\/em>","catalog_promo_type_id":null}],"weterynarze.krakow.pl":[]}}
-	 
+	Przykład zwróci:	 
