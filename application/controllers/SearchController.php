@@ -24,6 +24,7 @@ class SearchController extends Zend_Controller_Action
     	$distance = $this->_getParam('distance');
 
     	$search = new Application_Model_SearchProxy();
-    	$this->view->result = $search->near($address, $distance);
+    	$this->view->success = 'OK';
+    	$this->view->results = $search->near($address, $distance);
     }
 }
