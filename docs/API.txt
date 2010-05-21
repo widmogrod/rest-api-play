@@ -57,4 +57,13 @@ PRZYKŁAD:
 
 	/search/near?address=Kraków ul. Starowiślna&distance=0.2
 	
-	Przykład zwróci:	 
+	Przykład zwróci:	
+	
+
+
+	
+Cachowanie danych
+-----------------
+
+Jako że aktualizacja danych infoportali jest w okresie dziennym,
+zatem API pokrakowie będzie również z tą częstotniwością (24h lub 86400s). 

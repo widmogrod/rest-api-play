@@ -1,6 +1,11 @@
 <?php
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 {
+	public function _initActionHelper()
+	{
+		Zend_Controller_Action_HelperBroker::addHelper(new KontorX_Controller_Action_Helper_Json());
+	}
+
 	/**
 	 * Przygotowanie cache całej aplikacji
 	 */
@@ -24,8 +29,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 					'cache' => true,
 					'make_id_with_get_variables' => true,
 					'cache_with_get_variables' => true,
-					'make_id_with_cookie_variables' => true,
-					'cache_with_cookie_variables' => true,
 				)
 		   )
 		);

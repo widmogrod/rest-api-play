@@ -1,13 +1,12 @@
 <?php
 class SearchController extends Zend_Controller_Action
 {
-	public $contexts = array(
-		'near' => array('json')
-	);
-
 	public function init()
 	{
-		$this->_helper->contextSwitch->initContext('json');
+		/* @var $json KontorX_Controller_Action_Helper_Json */
+		$json = $this->_helper->getHelper('Json');
+		$json->setCallback($this->_getParam('callback'));
+
 		$this->_helper->viewRenderer->setNoRender(true);
 	}
 
@@ -24,7 +23,13 @@ class SearchController extends Zend_Controller_Action
     	$distance = $this->_getParam('distance');
 
     	$search = new Application_Model_SearchProxy();
-    	$this->view->success = 'OK';
-    	$this->view->results = $search->near($address, $distance);
+    	
+    	
+    	$data = array(
+    		'success' =>'OK',
+    		'results' => $search->near($address, $distance)
+    	);
+    	
+    	$this->_helper->json($data);
     }
 }
