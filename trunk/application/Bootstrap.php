@@ -3,6 +3,10 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 {
 	public function _initActionHelper()
 	{
+		/**
+		 * Ta sztuczka pozwala wykorzystac odpowiednia helper akcji z funkcjonalnością
+		 * - callback - czyli owinięcia odpowiedzi JSON w funkcje zwrotną.. JSPON 
+		 */
 		Zend_Controller_Action_HelperBroker::addHelper(new KontorX_Controller_Action_Helper_Json());
 	}
 
